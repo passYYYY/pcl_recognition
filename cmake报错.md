@@ -18,3 +18,7 @@ boost::shared_ptr<pcl::features::ISMVoteList<pcl::PointXYZ>> vote_list = ism.fin
         testing_cloud,
         testing_normals,
         testing_class); 
+
+对‘vtkRenderingOpenGL2_AutoInit_Destruct()’未定义的引用
+    发现居然是cmakelists文件出了错误，结果很意外。object_recognition_kitchen没有target_link_lib
+    target_link_libraries (object_recognition_kitchen object_recognizer ${PCL_LIBRARIES})
